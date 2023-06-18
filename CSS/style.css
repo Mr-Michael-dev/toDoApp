@@ -5,3 +5,8 @@ body{
     background-size: cover;
     height: auto;
 }
+
+.nav-link:hover{
+    background-color: aliceblue;
+   transition-property: all;
+}
