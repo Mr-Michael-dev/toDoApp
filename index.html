@@ -92,5 +92,49 @@
           <input type="submit" class="btn btn-outline-success w-25  mt-2 mb-4" value="Get Started">
         </div>
     </section>
+
+    <!-- This is the user section where tasks are been added monitored and removed -->
+
+    <section class="container ">
+      <div class="h1">
+        Hello 
+        <p id="name"></p>
+      </div>
+
+      <div class="row  ">
+        <div class="mb-3  col-sm">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Your pending Tasks
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul id="list1"></ul>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+        <div class="mb-3 col-sm">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  Your completed Tasks
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul id="list2"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 </body>
 </html>

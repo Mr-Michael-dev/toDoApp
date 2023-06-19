@@ -4,6 +4,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;
+    overflow: auto;
 }
 
 .form{
@@ -26,22 +27,33 @@ body{
 }
 
 .clock span{
-    width: 70px;
-    height: 50px;
+    width: 80px;
+    height: 70px;
     background: azure;
     opacity: .70;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .clock .text{
-    height: 15px;
-    font-size: 7px;
+    height: 20px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: aquamarine;
+    background: rgb(189, 137, 186);
     opacity: 0.75;
+    font-weight: 600;
+}
+
+.clock #ampm{
+    bottom: 0;
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    background: rgb(21, 160, 79);
+    color: rgb(255, 255, 255);
 }
