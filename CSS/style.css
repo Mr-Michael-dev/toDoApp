@@ -6,9 +6,18 @@ body{
     height: auto;
 }
 
+.form{
+    justify-content: center;
+}
+
 .nav-link:hover{
-    background-color: aliceblue;
-   transition-property: all;
+    background:rgba(255, 255, 255, 0.473);
+   transition-property: all ease;
+   transform-origin: center;
+}
+
+.clock{
+    justify-content: center;
 }
 
 .clock div{
@@ -17,14 +26,14 @@ body{
 }
 
 .clock span{
-    width: 50px;
-    height: 40px;
+    width: 70px;
+    height: 50px;
     background: azure;
-    opacity: .75;
+    opacity: .70;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -36,10 +45,3 @@ body{
     background: aquamarine;
     opacity: 0.75;
 }
-
-.clock
-@media (max-width: 768px) { 
-    width: 100px;
-    height: 80px;
-    font-size: 50px;
-     }
