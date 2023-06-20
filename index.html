@@ -17,7 +17,7 @@
 
   <!-- This is the navigation bar section -->
 
-    <nav class="navbar navbar-expand-lg bg-opacity-50 p-lg-3  p-sm-1   bg-body-secondary  ">
+    <nav class="navbar navbar-expand-lg bg-opacity-50 p-lg-3  p-sm-1 fixed-top  bg-body-secondary  ">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <i class='bx bx-timer d-inline-block fs-2 fw-light   align-text-bottom text-danger' alt="Logo" width="30" height="24"></i>
@@ -50,8 +50,8 @@
     </div>
 
 <!-- This is the home section. it has a display block attribute which will be hidden dynamically on click of the get started button. -->
-
-    <section class="container text-center bg-body-tertiary bg-opacity-25 p-2 mt-5    ">
+    <br> <br>
+    <section class="container text-center bg-body-tertiary bg-opacity-25 p-2 mt-5">
       <div>
        <P class="h1 display-3 fw-semibold p-2 ">WELCOME !</P>
       </div>
@@ -60,20 +60,20 @@
       <P class="fw-normal  fs-4 mt-2 p-md-2 p-1">Effectively plan your day with our ToDo app</P>
     </div>
 
-      <div class=" clock d-flex">
-        <div>
+      <div class="clock d-flex">
+        <div class="shadow ">
           <span id="hour">00</span>
           <span class="text">Hour</span>
         </div>
-        <div>
+        <div class="shadow ">
           <span id="hour">00</span>
           <span class="text">Minutes</span>
         </div>
-        <div>
+        <div class="shadow ">
           <span id="hour">00</span>
           <span class="text">Seconds</span>
         </div>
-        <div>
+        <div class="shadow ">
           <span id="ampm">AM</span>
         </div>
       </div>
@@ -95,12 +95,54 @@
 
     <!-- This is the user section where tasks are been added monitored and removed -->
 
-    <section class="container ">
+    <section class="container mt-md-5 mt-4  ">
       <div class="h1">
-        Hello 
+        <div>Hello</div> 
         <p id="name"></p>
       </div>
 
+      <div class="p-3  mb-3 ">
+        <p class="text-center bg-light-subtle p-3 mb-0 shadow bg-opacity-75 rounded-3  ">
+          “The bad news is time flies. The good news is you’re the pilot.” - Michael Altshuler.
+          <br>
+          Plan your day with our ToDo app. Input your task below and monitor effectively.
+        </p>
+      </div>
+
+      <div class="clock d-flex mb-3 ">
+        <div class="shadow ">
+          <span id="hour">00</span>
+          <span class="text">Hour</span>
+        </div>
+        <div class="shadow ">
+          <span id="hour">00</span>
+          <span class="text">Minutes</span>
+        </div>
+        <div class="shadow ">
+          <span id="hour">00</span>
+          <span class="text">Seconds</span>
+        </div>
+        <div class="shadow ">
+          <span id="ampm">AM</span>
+        </div>
+      </div>
+      
+
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+            <label for="floatingInputGrid">Enter Your Task</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+            <label for="floatingInputGrid">Task Discription</label>
+          </div>
+        </div>
+      </div>
+      <hr class="border-black shadow ">
       <div class="row  ">
         <div class="mb-3  col-sm">
           <div class="accordion" id="accordionExample">
