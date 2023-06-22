@@ -51,9 +51,10 @@ body{
 .clock #ampm{
     bottom: 0;
     position: absolute;
-    width: 60px;
-    height: 30px;
-    font-size: 20px;
-    background: rgb(21, 160, 79);
+    width: 45px;
+    height: 28px;
+    font-size: 17px;
+    font-weight: 500;
+    background: rgb(45, 146, 228);
     color: rgb(255, 255, 255);
 }

@@ -28,20 +28,18 @@
           </button>
           <div class="collapse navbar-collapse justify-content-between " id="navbarTogglerDemo01">
             <span class="m-auto "></span>
-              <span class="navbar-text  ">
+              <span class="navbar-text text-dark  ">
                 Connect With Us
               </span>
             <ul class="navbar-nav  me-3  mb-2 mb-lg-0">
               <li class="nav-item d-flex ">
                 <a class="nav-link rounded-circle   " href="#"><i class='bx bxl-facebook-circle fs-4 text-primary'></i></a>
-                <a class="nav-link rounded-circle " href="#"><i class='bx bxl-twitter fs-4 text-primary' ></i></a>
-            </li>
-            <li class="nav-item">
-                
+                <a class="nav-link rounded-circle mx-2 " href="#"><i class='bx bxl-twitter fs-4 text-primary' ></i></a>
+                <a class="nav-link rounded-circle " href="#"><i class='bx bxl-github fs-4 text-dark ' ></i></a>
             </li>
             </ul>
             <form class="d-flex">
-                <input class="btn btn-outline-success" type="submit" value="Get Started">
+                <input class="btn btn-outline-primary " type="submit" value="Get Started">
               </form>
         </div>
           </div>
@@ -89,27 +87,20 @@
         </div>
       </div>
         <div class="form-floating">
-          <input type="submit" class="btn btn-outline-success w-25  mt-2 mb-4" value="Get Started">
+          <input type="submit" class="btn btn-outline-primary  w-25  mt-2 mb-4" value="Get Started">
         </div>
     </section>
 
     <!-- This is the user section where tasks are been added monitored and removed -->
 
-    <section class="container mt-md-5 mt-4  ">
+    <section >
+      <div class="container mt-md-5 mt-4" >
       <div class="h1">
         <div>Hello</div> 
         <p id="name"></p>
       </div>
 
-      <div class="p-3  mb-3 bg-opacity-10  ">
-        <p class="text-center bg-light p-3 mb-0 shadow bg-opacity-75 rounded-3 bg-opacity-25  ">
-          “The bad news is time flies. The good news is you’re the pilot.” - Michael Altshuler.
-          
-          Plan your day with our ToDo app. Input your task below and monitor effectively.
-        </p>
-      </div>
-
-      <div class="clock d-flex mb-3 ">
+      <div class="clock d-flex mb-4 ">
         <div class="shadow ">
           <span id="hour">00</span>
           <span class="text">Hour</span>
@@ -126,37 +117,54 @@
           <span id="ampm">AM</span>
         </div>
       </div>
-      
-      <div class="container text-center ">
-        <div class="row align-items-center">
-          <div class="col">
-          <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG9kb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="task image">
-          </div>
-          <div class="col bg-secondary  shadow  bg-opacity-50  ">
-            <form action="">
-              <div class="form-text mb-3"><h3>Enter your task below</h1></div>
+    </div>
 
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <div class=" container m-auto  h-25   text-center">
+        <div class="row">
+
+          <div class="col-sm-12 col-lg-3  col-md-6  p-6 mb-1  bg-light bg-opacity-50 rounded bg-opacity-25 d-flex align-items-center justify-content-center  ">
+            <p class="p-4"> “The bad news is time flies. The good news is you’re the pilot.” - Michael Altshuler.
+              
+              Plan your day with our ToDo app. Input your task below and monitor effectively.
+            </p>
+          </div>
+          
+          <div class="col-sm-12 col-lg-6  col-md-6">
+            <div style="max-width: 100%; height: auto;">
+                <img src="https://images.unsplash.com/photo-1586281380923-93c9b0a7296e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRvZG98ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60" alt="task image"  class="img-fluid rounded w-100  shadow mb-1 " style="max-width: 110%; height: auto;">
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-3 rounded   mb-1   bg-secondary p-4    shadow  bg-opacity-50 align-items-center justify-content-center ">
+            <form action="">
+              <div class="mb-1 mt-2  text-start "><h6>Enter your task below</h6></div>
+
+              <div class="form-floating mb-1 ">
+                <input type="text" class="form-control" id="floatingInput" placeholder="yourName" minlength="3">
                 <label for="floatingInput">Enter Task</label>
               </div>
 
-              <div class="form-floating mb-3">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 50px"></textarea>
-             <label for="floatingTextarea2">Task Discription</label>
+              <div class="form-floating mb-1">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea1" style="height: 2px;" minlength="15"></textarea>
+             <label for="floatingTextarea1">Task Discription</label>
             </div>
 
               <div class="form-floating mb-3">
                 <input type="datetime-local" class="form-control"  placeholder="taskDeadline" value="2023-06-12T19:30">
                 <label for="taskDeadline">Task Deadline</label>
               </div>
+              <div class="form-floating">
+                <input type="submit" class="btn btn-primary  mt-1 mb-2  " value="Add task">
+              </div>
             </form>
           </div>
         </div>
       </div>
      
-      <hr class="border-black shadow ">
-      <div class="row  ">
+      <hr class="border-dark container mt-5   shadow " style="border-width: 5px; border-radius: 100%;">
+
+      <!-- this is the section that displays the uncompleted and completed task -->
+      <div class="container mt-md-5 mt-4 mb-4  " >
+      <div class="row">
         <div class="mb-3  col-sm">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
@@ -190,6 +198,24 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
+    <footer class="bg-light   bg-opacity-75">
+      <div class="container text-center ">
+        <div class="row p-2 ">
+          <div class="col-md-6  col-sm-12 mt-md-2">
+            <p class="mb-0 ">View source code on  <a class="rounded-circle " href="#"><i class='bx bxl-github fs-4 text-dark ' >Github </i></a></p>
+            <P class="d-flex justify-content-center m-0">
+              Connect With us<a class="rounded-circle mx-3 " href="#"><i class='bx bxl-facebook-circle fs-4 text-primary'></i></a>
+                <a class="rounded-circle " href="#"><i class='bx bxl-twitter fs-4 text-primary' ></i></a>
+            </P>
+          </div>
+          <div class="col-md-6  col-sm-12 mt-md-2">
+            <p class="mb-0 ">Designed and packed by Mr-Michael-dev</p>
+            <p class="m-0 ">Copyright&copy2023</p>
+          </div>
+          </div>
+      </div>
+    </footer>
 </body>
 </html>
