@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <script src="/JS/bootstrap.bundle.js" async></script>
+    <script src="JS/bootstrap.bundle.js" async></script>
+    <script src="JS/updateclock.js" defer></script>
+    <script src="JS/collapse.js" defer></script>
     <title>Day Planner</title>
 </head>
 <body>
@@ -19,7 +21,7 @@
 
     <nav class="navbar navbar-expand-lg bg-opacity-50 p-lg-3  p-sm-1 fixed-top  bg-body-secondary  ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <i class='bx bx-timer d-inline-block fs-2 fw-light   align-text-bottom text-danger' alt="Logo" width="30" height="24"></i>
                 DAY <span style="color: blueviolet;">PLANNER</span>
               </a>
@@ -38,8 +40,8 @@
                 <a class="nav-link rounded-circle " href="#"><i class='bx bxl-github fs-4 text-dark ' ></i></a>
             </li>
             </ul>
-            <form class="d-flex">
-                <input class="btn btn-outline-primary " type="submit" value="Get Started">
+            <form class="d-flex form">
+                <input class="btn btn-outline-primary close" type="submit" value="Get Started">
               </form>
         </div>
           </div>
@@ -49,7 +51,7 @@
 
 <!-- This is the home section. it has a display block attribute which will be hidden dynamically on click of the get started button. -->
     <br> <br>
-    <section class="container text-center bg-body-tertiary bg-opacity-25 p-2 mt-5">
+    <section class="container text-center bg-body-tertiary bg-opacity-25 p-2 mt-5" id="closeWelcome">
       <div>
        <P class="h1 display-3 fw-semibold p-2 ">WELCOME !</P>
       </div>
@@ -60,61 +62,64 @@
 
       <div class="clock d-flex">
         <div class="shadow ">
-          <span id="hour">00</span>
+          <span class="hour">00</span>
           <span class="text">Hour</span>
         </div>
         <div class="shadow ">
-          <span id="hour">00</span>
+          <span class="minutes">00</span>
           <span class="text">Minutes</span>
         </div>
         <div class="shadow ">
-          <span id="hour">00</span>
+          <span class="seconds">00</span>
           <span class="text">Seconds</span>
         </div>
         <div class="shadow ">
-          <span id="ampm">AM</span>
+          <span class="ampm">AM</span>
         </div>
       </div>
       
+      <form action="" class="form">
       <div class="m-auto w-75 ">
         <div class="form-text text-start p-1 ms-1">Enter your full name to get started</div>
-        <div class="input-group mb-3">
+        <div class="input-group">
           <span class="input-group-text fs-6 "><i class='bx bx-user'></i></span>
           <div class="form-floating">
             <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
             <label for="floatingInputGroup1">Your Name</label>
           </div>
         </div>
+        <div class="form-text text-start text-danger text-center" id="error" style="display: none;">Please enter your full name</div>
       </div>
         <div class="form-floating">
-          <input type="submit" class="btn btn-outline-primary  w-25  mt-2 mb-4" value="Get Started">
+          <input type="submit" class="btn btn-outline-primary  w-25  mt-2 mb-4 close" value="Get Started">
         </div>
+      </form>
     </section>
 
     <!-- This is the user section where tasks are been added monitored and removed -->
 
-    <section >
+    <section style="display: none;" id="displayTask">
       <div class="container mt-md-5 mt-4" >
       <div class="h1">
-        <div>Hello</div> 
-        <p id="name"></p>
+        <div>Hello,<p id="name" class="text-primary  "></p></div> 
+        
       </div>
 
       <div class="clock d-flex mb-4 ">
         <div class="shadow ">
-          <span id="hour">00</span>
+          <span class="hour">00</span>
           <span class="text">Hour</span>
         </div>
         <div class="shadow ">
-          <span id="hour">00</span>
+          <span class="minutes">00</span>
           <span class="text">Minutes</span>
         </div>
         <div class="shadow ">
-          <span id="hour">00</span>
+          <span class="seconds">00</span>
           <span class="text">Seconds</span>
         </div>
         <div class="shadow ">
-          <span id="ampm">AM</span>
+          <span class="ampm">AM</span>
         </div>
       </div>
     </div>
@@ -200,14 +205,14 @@
       </div>
     </div>
     </section>
-    <footer class="bg-light   bg-opacity-75">
-      <div class="container text-center ">
+    <footer class="bg-dark bg-opacity-75 mt-5 mb-0">
+      <div class="container text-center text-light">
         <div class="row p-2 ">
           <div class="col-md-6  col-sm-12 mt-md-2">
-            <p class="mb-0 ">View source code on  <a class="rounded-circle " href="#"><i class='bx bxl-github fs-4 text-dark ' >Github </i></a></p>
-            <P class="d-flex justify-content-center m-0">
-              Connect With us<a class="rounded-circle mx-3 " href="#"><i class='bx bxl-facebook-circle fs-4 text-primary'></i></a>
-                <a class="rounded-circle " href="#"><i class='bx bxl-twitter fs-4 text-primary' ></i></a>
+            <p class="mb-0 ">View source code on  <a class="rounded-circle  " href="#"><i class='bx bxl-github fs-4 text-dark text-bg-light p-1 ' >Github </i></a></p>
+            <P class="d-flex justify-content-center m-1">
+              Connect With us<a class="rounded-circle mx-3 " href="#"><i class='bx bxl-facebook-circle fs-4 text-primary text-bg-light'></i></a>
+                <a class="rounded-circle " href="#"><i class='bx bxl-twitter fs-4 text-bg-light text-primary' ></i></a>
             </P>
           </div>
           <div class="col-md-6  col-sm-12 mt-md-2">
