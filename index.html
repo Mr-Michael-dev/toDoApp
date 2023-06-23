@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <script src="JS/bootstrap.bundle.js" async></script>
     <script src="JS/updateclock.js" defer></script>
-    <script src="JS/collapse.js" defer></script>
+    <script src="JS/closeWelcome.js" defer></script>
+    <script src="JS/updateTask.js" defer></script>
     <title>Day Planner</title>
 </head>
 <body>
@@ -140,7 +141,7 @@
             </div>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-3 rounded   mb-1   bg-secondary p-4    shadow  bg-opacity-50 align-items-center justify-content-center ">
-            <form action="">
+            <form action="" id="myForm">
               <div class="mb-1 mt-2  text-start "><h6>Enter your task below</h6></div>
 
               <div class="form-floating mb-1 ">
@@ -154,8 +155,8 @@
             </div>
 
               <div class="form-floating mb-3">
-                <input type="datetime-local" class="form-control"  placeholder="taskDeadline" value="2023-06-12T19:30">
-                <label for="taskDeadline">Task Deadline</label>
+                <input type="datetime-local" class="form-control"  placeholder="taskDeadline" value="2023-06-12T19:30" id="date">
+                <label for="taskDeadline" >Task Deadline</label>
               </div>
               <div class="form-floating">
                 <input type="submit" class="btn btn-primary  mt-1 mb-2  " value="Add task">
@@ -180,7 +181,7 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <ul id="list1"></ul>
+                  <ul id="myList1"></ul>
                 </div>
               </div>
             </div>
@@ -196,7 +197,7 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <ul id="list2"></ul>
+                  <ul id="myList2"></ul>
                 </div>
               </div>
             </div>

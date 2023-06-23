@@ -58,8 +58,3 @@ body{
     background: rgb(45, 146, 228);
     color: rgb(255, 255, 255);
 }
-
-.fade-in {
-    transition: opacity 3s ease-in;
-    opacity: 0;
-  }
