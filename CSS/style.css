@@ -1,6 +1,24 @@
+*{
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+   }
+
+   * .accordion li {
+    background-color:rgba(231, 231, 231, 0.5);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+
+   }
+   * .accordion li:hover {
+    transform: translate(3px, -3px); 
+    transition: all ease 0.1;
+    }
 body{
     font-family: 'ubuntu', sans-serif;
-    background-image: url(https://images.unsplash.com/photo-1574302833650-e91c6ec31969?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cHVycGxlJTIwYW5kJTIwdmlvbGV0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
+    background-image: url(https://images.unsplash.com/photo-1536152470836-b943b246224c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;
@@ -9,12 +27,12 @@ body{
 
 .form{
     justify-content: center;
-}
-
+}    
 .nav-link:hover{
     background:rgba(255, 255, 255, 0.473);
-   transition-property: all ease;
    transform-origin: center;
+   transform: translate(2px, +2px); 
+   transition: all  ease 0.1;
 }
 
 .clock{
@@ -43,7 +61,8 @@ body{
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: rgb(189, 137, 186);
+    background: rgb(0, 47, 255);
+    color: rgb(255, 255, 255);
     opacity: 0.75;
     font-weight: 600;
 }
@@ -55,6 +74,43 @@ body{
     height: 28px;
     font-size: 17px;
     font-weight: 500;
-    background: rgb(45, 146, 228);
+    background: rgb(0, 47, 255);
     color: rgb(255, 255, 255);
+}
+
+
+.form-floating.error input{
+    border-color: #ff3860;
+}
+
+.form-floating.error textarea{
+    border-color: #ff3860;
+}
+
+.form-floating.success input{
+    border-color: #09c372;
+}
+
+.form-floating.success textarea{
+    border-color: #09c372;
+}
+
+.form-floating .error { color: #ff3860; font-size: 14px; height: 18px; }
+
+#taskCount1{ 
+    font-weight: bold;
+    color: white;
+    background-color: #ff3860;
+    font-size: 10px;
+    padding: 2px;
+    margin-left: 5px;
+}
+
+#taskCount2{ 
+    font-weight: bold;
+    color: white;
+    background-color: #09c372;
+    font-size: 10px;
+    padding: 2px;
+    margin-left: 5px;
 }

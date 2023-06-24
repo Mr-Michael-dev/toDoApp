@@ -5,8 +5,7 @@ forms.forEach((form) => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        if (
-        validateForm()) {
+        if (validateForm()) {
             closeHome();
             displayTasks();
             getName();
@@ -28,7 +27,7 @@ const validateForm = () => {
       return false;
     } else {
         errorElement.style.display = 'none';
-        yourNameInput.style.border = '';
+        yourNameInput.style.border = '2px solid green';
         return true;
     }
 };
@@ -38,7 +37,7 @@ const closeHome = () => {
     const closeHome = document.getElementById('closeWelcome');
     setTimeout(() => {
         closeHome.style.display = 'none';
-        task.style.transform = 'translateX(+100%)';
+        closeHome.style.transform = 'translateX(+100%)';
     }, 200);
      
 }
