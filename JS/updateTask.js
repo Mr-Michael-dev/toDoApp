@@ -84,7 +84,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     let remove = document.createElement('button');
     
     done.textContent = 'Done';
-    remove.textContent = 'remove';
+    remove.textContent = 'Remove';
     h3.textContent = task.value;
     para.textContent = taskDiscription.value;
     dateParagraph.textContent = date.value;
