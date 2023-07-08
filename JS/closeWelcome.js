@@ -3,17 +3,16 @@ const forms = document.querySelectorAll(".close-form");
 
 forms.forEach((form) => {
   form.addEventListener("click", (e) => {
-
     e.preventDefault();
     if (validateForm()) {
-      // get the name input 
-  const yourNameInput = document.getElementById("floatingInputGroup1");
-// store the name input to local storage
-localStorage.setItem("getName", yourNameInput.value);
+      // get the name input
+      const yourNameInput = document.getElementById("floatingInputGroup1");
+      // store the name input to local storage
+      localStorage.setItem("getName", yourNameInput.value);
 
-form.closest("form").submit();
+      form.closest("form").submit();
 
-window.location.href = "tasks.html";
+      window.location.href = "tasks.html";
     }
   });
 });
@@ -35,4 +34,3 @@ const validateForm = () => {
     return true;
   }
 };
-

@@ -95,7 +95,7 @@ body{
     border-color: #09c372;
 }
 
-.form-floating .error { color: #ff3860; font-size: 14px; height: 18px; }
+.form-floating .error { color: #ff3860; font-size: 15px; height: 20px; }
 
 #taskCount1{ 
     font-weight: bold;

@@ -46,7 +46,7 @@ function validateInput() {
     setError(taskDiscription, "Please describe your task");
     return false;
   } else if (taskDiscriptionValue.length <= 15) {
-    setError(taskDiscription, "Discriptions must be at least 15 characters");
+    setError(taskDiscription, "Descriptions must be at least 15 characters");
     return false;
   } else {
     setSuccess(taskDiscription);
@@ -219,6 +219,53 @@ function retrieveTasks() {
 
   if (taskList1) {
     document.getElementById("myList1").innerHTML = taskList1;
+
+    const doneButtons = document.querySelectorAll("#myList1 .done");
+    doneButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        alert("Congratulations, you have completed your task.");
+        const newListElement2 = button.closest("li");
+
+        document.getElementById("myList2").appendChild(newListElement2);
+        newListElement2.remove();
+
+        updateTaskCount();
+        storeTasks();
+      });
+    });
+
+    const removeButtons = document.querySelectorAll("#myList1 .remove");
+    removeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const confirmationMessage = button.nextElementSibling;
+
+        if (!confirmationMessage) {
+          const newConfirmationMessage = document.createElement("div");
+          newConfirmationMessage.innerHTML = `
+            Are you sure you want to remove the task?
+            <button class="yes">Yes</button>
+            <button class="no">No</button>
+          `;
+          button.parentElement.appendChild(newConfirmationMessage);
+
+          const yesButton = newConfirmationMessage.querySelector(".yes");
+          const noButton = newConfirmationMessage.querySelector(".no");
+
+          yesButton.addEventListener("click", () => {
+            const newListElement2 = button.closest("li");
+            newListElement2.remove();
+
+            newConfirmationMessage.remove();
+            updateTaskCount();
+            storeTasks();
+          });
+
+          noButton.addEventListener("click", () => {
+            newConfirmationMessage.remove();
+          });
+        }
+      });
+    });
   }
 
   if (taskList2) {
@@ -231,8 +278,8 @@ function retrieveTasks() {
 retrieveTasks();
 
 const yourName = localStorage.getItem("getName");
-    const name = document.getElementById("name");
-    name.innerHTML = yourName;
+const name = document.getElementById("name");
+name.innerHTML = yourName;
 
 sessionStorage.setItem("sessionDisplayed", "true");
 
@@ -240,6 +287,5 @@ window.addEventListener("DOMContentLoaded", () => {
   const sessionDisplayed = sessionStorage.getItem("sessionDisplayed");
 
   if (sessionDisplayed === "true") {
-  
   }
 });
