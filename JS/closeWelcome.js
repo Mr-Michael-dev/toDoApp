@@ -34,4 +34,3 @@ const validateForm = () => {
     return true;
   }
 };
-
