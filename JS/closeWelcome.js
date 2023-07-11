@@ -21,10 +21,9 @@ forms.forEach((form) => {
 const validateForm = () => {
   const yourNameInput = document.getElementById("floatingInputGroup1");
   const errorElement = document.getElementById("error");
-  const yourName = yourNameInput.value;
+  const yourName = yourNameInput.value.trim();
 
   if (yourName === "") {
-    alert("Your name is required, Please enter Your Name.");
     errorElement.style.display = "block";
     yourNameInput.style.border = "2px solid red";
     return false;
